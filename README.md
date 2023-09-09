@@ -40,6 +40,8 @@ https://jyoungjoon.github.io/hiimyoungjang
 
 You can simply run the app by opening the github pages link below.
 
+https://jyoungjoon.github.io/hiimyoungjang
+
 ---
 
 ## Credits
