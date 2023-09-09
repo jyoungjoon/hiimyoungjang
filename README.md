@@ -1,7 +1,3 @@
-![hiimyoungjang](https://img.shields.io/github/languages/count/jyoungjoon/hiimyoungjang) ![hiimyoungjang](https://img.shields.io/github/languages/top/jyoungjoon/hiimyoungjang)
-
----
-
 # "Hi, I'm Young Jang" v1
 
 ## Description
