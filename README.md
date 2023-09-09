@@ -4,7 +4,7 @@
 
 ![Screenshot](./public/hiimyoungjang/home.png)
 
-This meticulously designed portfolio, constructed entirely from scratch using React and styled-components, showcases its robust front-end functionality. There are plans to implement a back-end component in the near future, along with consideration for deployment options such as Heroku or Netlify to ensure seamless performance. Notably, every aspect of this project, including the captivating animations, has been crafted from scratch, contributing to its unique and engaging user experience.
+A portfolio designed using Figma, powered by React and styled-components. Front-end only at this time. All animations are made using CSS and framer-motion. Enjoy.
 
 ---
 
