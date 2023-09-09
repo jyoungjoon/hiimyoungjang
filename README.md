@@ -32,6 +32,8 @@ To download: Simply click on the download button on the repository on browser an
 
 If you don't feel like installing, that's completely fine, you can just click on the link below to see the deployed app.
 
+https://jyoungjoon.github.io/hiimyoungjang
+
 ---
 
 ## Usage
