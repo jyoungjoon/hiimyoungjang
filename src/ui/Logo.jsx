@@ -49,9 +49,14 @@ const StyledLogo = styled(Link)`
   }
 `;
 
-function Logo({ setIsNavOpen }) {
+function Logo({ setIsNavOpen, setIsHome }) {
+  function handleClick() {
+    setIsNavOpen(false);
+    setIsHome(true);
+  }
+
   return (
-    <StyledLogo to="/" onClick={() => setIsNavOpen(false)}>
+    <StyledLogo to="/" onClick={handleClick}>
       <span>young</span>&nbsp;&nbsp;&nbsp;
       <span>jang</span>
     </StyledLogo>

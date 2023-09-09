@@ -15,10 +15,14 @@ const StyledHeader = styled.div`
   z-index: 999999;
 `;
 
-function Header({ isNavOpen, setIsNavOpen }) {
+function Header({ isNavOpen, setIsNavOpen, setIsHome }) {
   return (
     <StyledHeader>
-      <Logo isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+      <Logo
+        isNavOpen={isNavOpen}
+        setIsNavOpen={setIsNavOpen}
+        setIsHome={setIsHome}
+      />
       <div style={{ display: 'flex', gap: '2rem' }}>
         <NavButton isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       </div>

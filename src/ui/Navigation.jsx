@@ -64,7 +64,7 @@ const NavItemTitle = styled.p`
   letter-spacing: -0.5rem;
 `;
 
-function Navigation({ isNavOpen, setIsNavOpen }) {
+function Navigation({ isNavOpen, setIsNavOpen, isHome, setIsHome }) {
   const [currentHovered, setCurrentHovered] = useState();
 
   useEffect(() => {
@@ -90,19 +90,28 @@ function Navigation({ isNavOpen, setIsNavOpen }) {
     transition: { duration: 0.2 },
   };
 
+  function handleHomeClick() {
+    setIsNavOpen(false);
+    setIsHome(true);
+  }
+
   return (
     <StyledNavigation>
       <NavWrapper>
         <Link to="/">
           <NavItem
-            data-value={'previews/previewhome.png'}
+            data-value={
+              isHome
+                ? 'hiimyoungjang/previews/previewhome.png'
+                : 'previews/previewhome.png'
+            }
             className="animateItem"
             whileHover={hoverAnimation}
             onMouseOver={(e) =>
               setCurrentHovered(e.currentTarget.dataset.value)
             }
             onMouseOut={() => setCurrentHovered(null)}
-            onClick={() => setIsNavOpen(false)}
+            onClick={handleHomeClick}
           >
             <span>01</span>
             <NavItemTitle>Home</NavItemTitle>
@@ -110,7 +119,11 @@ function Navigation({ isNavOpen, setIsNavOpen }) {
         </Link>
         <Link to="/about">
           <NavItem
-            data-value={'previews/previewabout.png'}
+            data-value={
+              isHome
+                ? 'hiimyoungjang/previews/previewabout.png'
+                : 'previews/previewabout.png'
+            }
             className="animateItem"
             whileHover={hoverAnimation}
             onMouseOver={(e) =>
@@ -125,7 +138,11 @@ function Navigation({ isNavOpen, setIsNavOpen }) {
         </Link>
         <Link to="/work">
           <NavItem
-            data-value={'previews/previewwork.png'}
+            data-value={
+              isHome
+                ? 'hiimyoungjang/previews/previewwork.png'
+                : 'previews/previewwork.png'
+            }
             className="animateItem"
             whileHover={hoverAnimation}
             onMouseOver={(e) =>
@@ -140,7 +157,11 @@ function Navigation({ isNavOpen, setIsNavOpen }) {
         </Link>
         <Link to="/contact">
           <NavItem
-            data-value={'previews/previewcontact.png'}
+            data-value={
+              isHome
+                ? 'hiimyoungjang/previews/previewcontact.png'
+                : 'previews/previewcontact.png'
+            }
             className="animateItem"
             whileHover={hoverAnimation}
             onMouseOver={(e) =>
@@ -156,7 +177,7 @@ function Navigation({ isNavOpen, setIsNavOpen }) {
       </NavWrapper>
       <Preview
         style={{
-          backgroundImage: `url('${currentHovered}')`,
+          backgroundImage: `url(${currentHovered})`,
           opacity: currentHovered ? 0.85 : 0,
         }}
       />

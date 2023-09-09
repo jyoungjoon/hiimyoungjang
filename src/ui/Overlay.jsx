@@ -14,15 +14,21 @@ const StyledOverlay = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0.1;
-  background-image: url('noise-tv.gif');
   z-index: -1;
 `;
 
-function Overlay() {
+function Overlay({ isHome }) {
   return (
     <>
       <StyledOverlayTwo />
-      <StyledOverlay />;
+      <StyledOverlay
+        style={
+          isHome
+            ? { backgroundImage: `url('noise-tv.gif')` }
+            : { backgroundImage: `url('noise-tv.gif')` }
+        }
+      />
+      ;
     </>
   );
 }

@@ -17,13 +17,22 @@ const StyledMain = styled.div`
   margin: 0 auto;
 `;
 
-function AppLayout({ isNavOpen, setIsNavOpen }) {
+function AppLayout({ isNavOpen, setIsNavOpen, isHome, setIsHome }) {
   return (
     <StyledLayout>
-      <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+      <Header
+        isNavOpen={isNavOpen}
+        setIsNavOpen={setIsNavOpen}
+        setIsHome={setIsHome}
+      />
       <StyledMain>
         {isNavOpen ? (
-          <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+          <Navigation
+            isNavOpen={isNavOpen}
+            setIsNavOpen={setIsNavOpen}
+            isHome={isHome}
+            setIsHome={setIsHome}
+          />
         ) : (
           <Outlet />
         )}

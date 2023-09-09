@@ -131,7 +131,8 @@ const ProjectDescription = styled.div`
   text-align: left;
 `;
 
-function Project({ isNavOpen, currentProject, myProjects }) {
+function Project({ isNavOpen, currentProject, myProjects, setIsHome }) {
+  setIsHome(false);
   const project = myProjects.find((project) => project.id === currentProject);
   const [loadingImage, setLoadingImage] = useState(true);
 

@@ -68,7 +68,8 @@ const DonationType = styled.div`
 
 const StyledLink = styled(Link)``;
 
-function Contact({isNavOpen}) {
+function Contact({ isNavOpen, setIsHome }) {
+  setIsHome(false);
   useEffect(() => {
     if (isNavOpen) {
       animate(

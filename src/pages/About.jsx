@@ -68,7 +68,8 @@ const AboutPicture = styled.div`
   z-index: -1;
 `;
 
-function About({ isNavOpen }) {
+function About({ isNavOpen, setIsHome }) {
+  setIsHome(false);
   useEffect(() => {
     if (isNavOpen) {
       animate(
@@ -94,7 +95,7 @@ function About({ isNavOpen }) {
         <AboutTextContent>
           <a href={'yjsresume.pdf'} target="_blank" rel="noreferrer">
             <div>
-              resume <span class="material-symbols-rounded">download</span>
+              resume <span className="material-symbols-rounded">download</span>
             </div>
           </a>
           <AboutText className="animateItem">

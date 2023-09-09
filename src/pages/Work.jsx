@@ -41,7 +41,14 @@ const ProjectList = styled.ul`
   overflow: scroll;
 `;
 
-function Work({ isNavOpen, currentProject, setCurrentProject, myProjects }) {
+function Work({
+  isNavOpen,
+  currentProject,
+  setCurrentProject,
+  myProjects,
+  setIsHome,
+}) {
+  setIsHome(false);
   const [hoveredProject, setHoveredProject] = useState('');
 
   useEffect(() => {

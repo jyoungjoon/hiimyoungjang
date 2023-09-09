@@ -379,19 +379,43 @@ const myProjects = [
 function App() {
   const [currentProject, setCurrentProject] = useState(0);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isHome, setIsHome] = useState(true);
 
   return (
     <BrowserRouter basename="/hiimyoungjang">
       <GlobalStyle />
-      <Overlay />
+      <Overlay isHome={isHome} />
       <Routes>
         <Route
           element={
-            <AppLayout isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+            <AppLayout
+              isNavOpen={isNavOpen}
+              setIsNavOpen={setIsNavOpen}
+              isHome={isHome}
+              setIsHome={setIsHome}
+            />
           }
         >
-          <Route index element={<Home isNavOpen={isNavOpen} />} />
-          <Route path="/about" element={<About isNavOpen={isNavOpen} />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                isNavOpen={isNavOpen}
+                isHome={isHome}
+                setIsHome={setIsHome}
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <About
+                isNavOpen={isNavOpen}
+                isHome={isHome}
+                setIsHome={setIsHome}
+              />
+            }
+          />
           <Route
             path="/work"
             element={
@@ -400,10 +424,21 @@ function App() {
                 setCurrentProject={setCurrentProject}
                 myProjects={myProjects}
                 isNavOpen={isNavOpen}
+                isHome={isHome}
+                setIsHome={setIsHome}
               />
             }
           />
-          <Route path="/contact" element={<Contact isNavOpen={isNavOpen} />} />
+          <Route
+            path="/contact"
+            element={
+              <Contact
+                isNavOpen={isNavOpen}
+                isHome={isHome}
+                setIsHome={setIsHome}
+              />
+            }
+          />
           <Route
             path="/project"
             element={
@@ -412,12 +447,13 @@ function App() {
                 setCurrentProject={setCurrentProject}
                 myProjects={myProjects}
                 isNavOpen={isNavOpen}
+                isHome={isHome}
+                setIsHome={setIsHome}
               />
             }
           />
           )
         </Route>
-        <Route path="*" element={<Home isNavOpen={isNavOpen} />} />
       </Routes>
     </BrowserRouter>
   );
