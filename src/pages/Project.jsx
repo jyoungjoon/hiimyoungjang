@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Heading from '../ui/Heading';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { stagger, animate } from 'framer-motion';
+import Loader from '../ui/Loader';
 
 const StyledProject = styled.div`
   position: relative;
@@ -132,9 +133,10 @@ const ProjectDescription = styled.div`
 
 function Project({ isNavOpen, currentProject, myProjects }) {
   const project = myProjects.find((project) => project.id === currentProject);
+  const [loadingImage, setLoadingImage] = useState(true);
 
   useEffect(() => {
-    if (isNavOpen && project) {
+    if (isNavOpen && project && !loadingImage) {
       animate(
         '.animateItem',
         { y: [0, -1000], opacity: [1, 0] },
@@ -142,18 +144,31 @@ function Project({ isNavOpen, currentProject, myProjects }) {
       );
     }
 
-    if (!isNavOpen && project) {
+    if (!isNavOpen && project && !loadingImage) {
       animate(
         '.animateItem',
         { y: [-1000, 0], opacity: [0, 1] },
         { delay: stagger(0.3), duration: 0.3 }
       );
     }
-  }, [project, isNavOpen]);
+
+    const mainImage = new Image();
+    mainImage.src = project?.picture[0]?.pictureUrl;
+
+    mainImage.onload = () => {
+      setLoadingImage(false);
+    };
+
+    return () => {
+      mainImage.onload = null;
+    };
+  }, [project, isNavOpen, loadingImage]);
 
   if (!project) {
     return window.history.back();
   }
+
+  if (loadingImage) return <Loader />;
 
   return (
     <StyledProject>
@@ -216,6 +231,10 @@ function Project({ isNavOpen, currentProject, myProjects }) {
               <p>
                 <span>Skills</span>
                 {project.skills.join(', ')}
+              </p>
+              <p>
+                <span>Github</span>
+                {project.github}
               </p>
             </ProjectSummary>
             <ProjectDescription>{project.description}</ProjectDescription>

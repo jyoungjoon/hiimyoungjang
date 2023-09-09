@@ -38,7 +38,8 @@ const myProjects = [
     patron: 'potential employer',
     description:
       'This is my first professional portfolio built with React. Inspired by the remarkable work of designers (especially Sharlee) and creators worldwide, I incorporated various UI/UX design principles. Utilizing React and styled-components, I brought this portfolio to life with determination. Crafting this project was a truly inspiring experience.',
-    webUrl: '',
+    webUrl: 'https://jyoungjoon.github.io/hiimyoungjang/',
+    github: 'https://github.com/jyoungjoon/hiimyoungjang',
     picture: [
       {
         title: 'Homepage',
@@ -91,6 +92,7 @@ const myProjects = [
     description:
       "a full-stack React application with a strong emphasis on UI/UX. The project drew inspiration from the 'Bellissima' wine website (https://bellissimaprosecco.com/) and from handpicked colors from AI generated images. The design process was facilitated through Figma, and React was utilized to power the application, resulting in a seamless blend of aesthetics and functionality.",
     webUrl: 'https://pourfolio-7e8191d15c2a.herokuapp.com/',
+    github: 'https://github.com/jyoungjoon/Pourfolio',
     picture: [
       {
         title: 'Homepage',
@@ -144,6 +146,7 @@ const myProjects = [
     patron: 'n/a',
     description: `A full-stack application with a focus on social networking features, including adding new pets, sharing pictures, liking and commenting on other users' pets, sending/receiving messages, and updating user information and profile pictures. This project marked my second collaboration with fellow developers.`,
     webUrl: 'https://lit-retreat-91915-8f068b8cfb99.herokuapp.com/',
+    github: 'https://github.com/jyoungjoon/Pet-locators',
     picture: [
       {
         title: 'Homepage',
@@ -176,6 +179,7 @@ const myProjects = [
     patron: 'n/a',
     description: `This marks my very first web application, constructed using classic HTML, CSS, JavaScript, and a RESTful API. Learning how to navigate Google Maps and identifying the appropriate API proved to be the most challenging aspects of this project, especially as a junior developer. Additionally, this experience marked my inaugural collaboration with fellow developers.`,
     webUrl: 'https://jyoungjoon.github.io/Leafy-locators/',
+    github: 'https://github.com/jyoungjoon/Leafy-locators',
     picture: [
       {
         title: 'Homepage',
@@ -210,6 +214,7 @@ const myProjects = [
     patron: 'n/a',
     description: `I developed a JavaScript quiz game with a Super Mario Bros. theme. I dedicated numerous hours to piecing everything together and making it visually appealing. Despite its design being reminiscent of the iconic game Super Mario Bros., I believe it came together quite nicely. Test your JavaScript knowledge with this quiz; the questions are based on LinkedIn's JavaScript assessment.`,
     webUrl: 'https://jyoungjoon.github.io/-TODO-THIS.QUIZ/',
+    github: 'https://github.com/jyoungjoon/-TODO-THIS.QUIZ',
     picture: [
       {
         title: 'Homepage',
@@ -239,6 +244,7 @@ const myProjects = [
     description:
       'This was the first portfolio I built while studying in UC Berkeley Coding Boot Camp. As I worked on it, I began to appreciate the allure of a well-balanced and colorfully designed webpage. It was my first project where I delved into using CSS @keyframes, adding an exciting layer of interactivity to the design. This experience laid the foundation for my journey into web development.',
     webUrl: 'https://jyoungjoon.github.io/youngs-portfolio/',
+    github: 'https://github.com/jyoungjoon/youngs-portfolio',
     picture: [
       {
         title: 'Homepage',
@@ -257,6 +263,7 @@ const myProjects = [
     description:
       'Early in my coding journey, I struggled with CSS flexbox properties. However, once I grasped the concept, I decided to create a small application to help others understand flexbox. This app provides a simple visual simulation for experimenting with different flexbox properties, making the learning process more intuitive.',
     webUrl: 'https://jyoungjoon.github.io/understand-flexbox/',
+    github: 'https://github.com/jyoungjoon/understand-flexbox',
     picture: [
       {
         title: 'Homepage',
@@ -276,6 +283,7 @@ const myProjects = [
     description:
       'As I ventured into coding, I watched my first HTML and CSS tutorials on YouTube. Armed with this newfound knowledge, I set out to create a captivating landing page. It was a learning curve, taking time to position each element meticulously. However, the result was a beautiful and inspiring product, marking the start of my coding journey.',
     webUrl: 'https://jyoungjoon.github.io/01-landing-page/',
+    github: 'https://github.com/jyoungjoon/01-landing-page',
     picture: [
       {
         title: 'Homepage',
@@ -373,7 +381,7 @@ function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/hiimyoungjang">
       <GlobalStyle />
       <Overlay />
       <Routes>
@@ -409,6 +417,7 @@ function App() {
           />
           )
         </Route>
+        <Route path="*" element={<Home isNavOpen={isNavOpen} />} />
       </Routes>
     </BrowserRouter>
   );
