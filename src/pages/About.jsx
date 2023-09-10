@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Heading from '../ui/Heading';
 import { stagger, animate } from 'framer-motion';
 import { useEffect } from 'react';
+import { device } from '../ui/MediaQueries';
 
 const StyledAbout = styled.div`
   width: 95%;
@@ -11,11 +12,29 @@ const StyledAbout = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-left: 5%;
+
+  @media ${device.laptop} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 95%;
+    height: 100%;
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: 15%;
+  }
 `;
 
 const AboutTextDiv = styled.div`
   width: 60%;
   height: 75%;
+
+  @media ${device.laptop} {
+    width: 100%;
+    height: 40%;
+    margin-right: -19%;
+  }
 `;
 
 const AboutTextContent = styled.div`
@@ -35,6 +54,10 @@ const AboutTextContent = styled.div`
 
     & span {
       transform: translateY(20%);
+      @media ${device.laptop} {
+        font-size: 3rem;
+        transform: translateY(20%);
+      }
     }
   }
 `;
@@ -59,13 +82,29 @@ const AboutPicture = styled.div`
   background-image: url('profilepic.png');
   background-size: cover;
   background-position: center;
-  border-radius: 0rem 0rem 0rem 15rem;
+  border-radius: 0rem 0rem 0rem 5rem;
   transform: translate(0%, -5%);
   filter: opacity(0.8);
   position: fixed;
   top: 0;
   right: 0;
   z-index: -1;
+
+  @media ${device.laptopL} {
+    background-position: right;
+    transform: translate(0%, 0%);
+  }
+
+  @media ${device.laptop} {
+    height: 100%;
+    background-position: bottom center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 2rem 2rem 2rem 2rem;
+    transform: translate(0%, 0%);
+  }
 `;
 
 function About({ isNavOpen, setIsHome }) {

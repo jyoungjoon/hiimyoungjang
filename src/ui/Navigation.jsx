@@ -2,6 +2,7 @@ import { animate, motion, stagger } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { device } from './MediaQueries';
 
 const StyledNavigation = styled.div`
   position: relative;
@@ -62,6 +63,10 @@ const NavItemTitle = styled.p`
   font-weight: 900;
   color: #24aa7d;
   letter-spacing: -0.5rem;
+
+  @media ${device.tabletM} {
+    font-size: 7rem;
+  }
 `;
 
 function Navigation({ isNavOpen, setIsNavOpen, isHome, setIsHome }) {

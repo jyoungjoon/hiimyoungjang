@@ -3,6 +3,7 @@ import ProjectListItem from '../ui/ProjectListItem';
 import Heading from '../ui/Heading';
 import { useEffect, useState } from 'react';
 import { stagger, animate } from 'framer-motion';
+import { device } from '../ui/MediaQueries';
 
 const StyledWork = styled.div`
   width: 100%;
@@ -12,6 +13,13 @@ const StyledWork = styled.div`
   align-items: center;
   align-content: center;
   overflow: hidden;
+
+  @media ${device.laptop} {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const StyledProjectPicture = styled.div`
@@ -25,6 +33,13 @@ const StyledProjectPicture = styled.div`
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   filter: brightness(0.975);
+
+  @media ${device.laptop} {
+    margin-top: 0;
+    height: 65%;
+    width: 95%;
+    border-radius: 2rem 2rem 2rem 2rem;
+  }
 `;
 
 const WorkList = styled.div`
@@ -32,6 +47,12 @@ const WorkList = styled.div`
   height: 75%;
   display: flex;
   flex-direction: column;
+
+  @media ${device.laptop} {
+    margin-right: -19%;
+    height: 40%;
+    width: 100%;
+  }
 `;
 
 const ProjectList = styled.ul`

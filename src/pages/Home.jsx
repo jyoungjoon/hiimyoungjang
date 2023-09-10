@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { stagger, animate } from 'framer-motion';
 import { useEffect } from 'react';
+import { device } from '../ui/MediaQueries';
 
 const StyledHome = styled.div`
   width: 100%;
@@ -12,6 +13,11 @@ const StyledHome = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
+
+  @media ${device.laptop} {
+    width: 95%;
+    margin: 0 auto;
+  }
 `;
 
 const StyledHeroMessage = styled.p`
@@ -20,6 +26,11 @@ const StyledHeroMessage = styled.p`
   letter-spacing: 0.15rem;
   font-weight: 400;
   color: #035aa6;
+
+  @media ${device.laptop} {
+    font-size: 6rem;
+  }
+
   & span {
     font-size: 6.5rem;
     font-weight: 700;
@@ -38,6 +49,12 @@ const StyledDescription = styled.p`
   color: #24aa7d;
   & span {
     font-size: 4rem;
+    @media ${device.laptop} {
+      font-size: 3rem;
+    }
+  }
+  @media ${device.laptop} {
+    font-size: 2.5rem;
   }
 `;
 

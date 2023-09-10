@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { stagger, animate } from 'framer-motion';
 import Loader from '../ui/Loader';
+import { device } from '../ui/MediaQueries';
 
 const StyledProject = styled.div`
   position: relative;
@@ -23,6 +24,9 @@ const ProjectDiv = styled.div`
   overflow: scroll;
   width: 100%;
   max-height: 100%;
+  @media ${device.laptop} {
+    width: 95%;
+  }
 `;
 
 const ProjectPicturesDiv = styled.div`
@@ -33,6 +37,10 @@ const ProjectPicturesDiv = styled.div`
   align-content: center;
   gap: 1rem;
   margin-bottom: 8rem;
+
+  @media ${device.laptop} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const PictureDiv = styled.div`
@@ -67,6 +75,10 @@ const ProjectPicture = styled.div`
   }
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+  @media ${device.laptop} {
+    width: 100% !important;
+  }
 `;
 
 const PictureDescription = styled.div`
@@ -74,6 +86,10 @@ const PictureDescription = styled.div`
   font-size: 1.6rem;
   margin: 2rem auto;
   font-weight: 500;
+
+  @media ${device.laptop} {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProjectDetailsDiv = styled.div`
@@ -84,6 +100,10 @@ const ProjectDetailsDiv = styled.div`
   height: auto;
   min-height: 30rem;
   min-height: 40rem;
+
+  @media ${device.laptop} {
+    width: 90%;
+  }
 `;
 
 const ProjectDetailsWrapper = styled.div`
@@ -94,6 +114,11 @@ const ProjectDetailsWrapper = styled.div`
   border-bottom: 1px solid #cecece;
   margin-top: 2rem;
   margin-bottom: 8rem;
+
+  @media ${device.laptop} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const ProjectSummary = styled.div`
@@ -105,6 +130,9 @@ const ProjectSummary = styled.div`
     font-size: 2rem;
     font-family: 'Ysabeau SC', sans-serif;
     color: #424242;
+    @media ${device.laptop} {
+      font-size: 1.6rem;
+    }
   }
 
   & span {
@@ -115,6 +143,14 @@ const ProjectSummary = styled.div`
     text-align: left;
     display: inline-block;
     width: 17.5rem;
+    @media ${device.laptop} {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media ${device.laptop} {
+    width: 100%;
+    font-size: 1.6rem;
   }
 `;
 
@@ -129,6 +165,10 @@ const ProjectDescription = styled.div`
   padding: 4rem;
   white-space: pre-line;
   text-align: left;
+  @media ${device.laptop} {
+    width: 100%;
+    font-size: 1.6rem;
+  }
 `;
 
 function Project({ isNavOpen, currentProject, myProjects, setIsHome }) {

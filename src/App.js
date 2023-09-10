@@ -9,6 +9,7 @@ import Work from './pages/Work';
 import Contact from './pages/Contact';
 import Overlay from './ui/Overlay';
 import Project from './pages/Project';
+import { device } from './ui/MediaQueries';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -20,6 +21,30 @@ const GlobalStyle = createGlobalStyle`
     font-smooth: always;
     scroll-behavior: smooth;
     scrollbar-width: none;
+
+    @media ${device.laptopL} {
+      font-size: 52.5%;
+    }
+    
+    @media ${device.tabletM} {
+      font-size: 50%;
+    }
+    
+    @media ${device.tabletS} {
+      font-size: 40%;
+    }
+    
+    @media ${device.mobileL} {
+      font-size: 35%;
+    }
+
+    @media ${device.mobileM} {
+      font-size: 30%;
+    }
+
+        @media ${device.mobileS} {
+      font-size: 25%;
+    }
   }
   
   &::-webkit-scrollbar {

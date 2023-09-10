@@ -3,6 +3,7 @@ import Heading from '../ui/Heading';
 import { Link } from 'react-router-dom';
 import { stagger, animate } from 'framer-motion';
 import { useEffect } from 'react';
+import { device } from '../ui/MediaQueries';
 
 const StyledContact = styled.div`
   width: 90%;
@@ -12,6 +13,14 @@ const StyledContact = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  @media ${device.laptop} {
+    margin-top: 15%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
 `;
 
 const InfoDiv = styled.div`
@@ -19,6 +28,12 @@ const InfoDiv = styled.div`
   flex-direction: column;
   width: 50%;
   height: 75%;
+
+  @media ${device.laptop} {
+    width: 100%;
+    height: 30%;
+    margin-right: -7.5%;
+  }
 `;
 
 const DonationDiv = styled.div`
@@ -26,6 +41,11 @@ const DonationDiv = styled.div`
   flex-direction: column;
   width: 50%;
   height: 75%;
+  @media ${device.laptop} {
+    width: 100%;
+    height: 30%;
+    margin-right: -7.5%;
+  }
 `;
 
 const Info = styled.div`
