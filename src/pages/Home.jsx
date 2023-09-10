@@ -25,6 +25,8 @@ const StyledHeroMessage = styled.p`
     font-weight: 700;
     font-family: 'Ysabeau SC', sans-serif;
     letter-spacing: -0.3rem;
+    display: inline-block;
+    cursor: help;
   }
 `;
 
@@ -82,19 +84,39 @@ function Home({ isNavOpen }) {
     }
   }, [isNavOpen]);
 
+  function handleMouseOver(e) {
+    e.target.style = 'transform: translateY(-0.1rem);';
+  }
+
+  function handleMouseOut(e) {
+    e.target.style = 'transform: translateY(0rem);';
+  }
+
   return (
     <StyledHome>
       <StyledHeroMessage
         className="animateItem"
         style={{ marginTop: '-20rem' }}
       >
-        Hi, I'm <span>Young Jang,</span>
+        Hi, I'm{' '}
+        <span
+          onMouseOver={(e) => handleMouseOver(e)}
+          onMouseOut={(e) => handleMouseOut(e)}
+        >
+          Young Jang,
+        </span>
       </StyledHeroMessage>
       <StyledHeroMessage
         className="animateItem"
         style={{ letterSpacing: '-0.5rem', marginBottom: '4rem' }}
       >
-        but you can call me <span>Joon</span>
+        but you can call me{' '}
+        <span
+          onMouseOver={(e) => handleMouseOver(e)}
+          onMouseOut={(e) => handleMouseOut(e)}
+        >
+          Joon
+        </span>
       </StyledHeroMessage>
       <StyledDescription className="animateItem">
         I'm a <span>UI/UX DESIGNER</span>, <span>FULL-STACK</span>

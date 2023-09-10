@@ -31,13 +31,23 @@ function ProjectListItem({
   setCurrentProject,
   setHoveredProject,
 }) {
+  function handleMouseOver(el) {
+    setHoveredProject(project.picture[0].pictureUrl);
+    el.style = 'transform: translateY(-0.1rem)';
+  }
+
+  function handleMouseOut(el) {
+    setHoveredProject('');
+    el.style = 'transform: translateY(0rem)';
+  }
+
   return (
     <StyledProjectListItem
       className={className}
       to={to}
       onClick={() => setCurrentProject(project.id)}
-      onMouseOver={() => setHoveredProject(project.picture[0].pictureUrl)}
-      onMouseOut={() => setHoveredProject('')}
+      onMouseOver={(e) => handleMouseOver(e.target)}
+      onMouseOut={(e) => handleMouseOut(e.target)}
     >
       {project.projectName}
       <StyledSkills>[{project.skills.join(', ')}]</StyledSkills>
