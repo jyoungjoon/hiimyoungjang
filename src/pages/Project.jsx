@@ -176,8 +176,10 @@ const ProjectDescription = styled.div`
   padding: 4rem;
   white-space: pre-line;
   text-align: left;
-  word-break: break-all;
   hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
   @media ${device.laptop} {
     border-top: 1px solid #cecece;
     padding: 2rem;
