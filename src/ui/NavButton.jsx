@@ -4,16 +4,16 @@ import { device } from './MediaQueries';
 
 const StyledNavButton = styled.div`
   position: relative;
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   overflow: hidden;
   z-index: -1;
 `;
 
 const LittleCircles = styled.div`
   position: absolute;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   border: 1px solid #424242;
   transition: 0.2s ease-in-out;
@@ -21,8 +21,8 @@ const LittleCircles = styled.div`
 
 const Overlay = styled.div`
   position: absolute;
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   right: 5rem;
   cursor: pointer;
@@ -104,7 +104,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
           style={
             isNavOpen
               ? {
-                  width: '3rem',
+                  width: '30px',
                   left: '50%',
                   top: '50%',
                   borderRadius: '1rem',
@@ -113,7 +113,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
                 }
               : isNavHovered
               ? {
-                  width: '3rem',
+                  width: '30px',
                   left: '50%',
                   top: '50%',
                   borderRadius: '1rem',
@@ -131,7 +131,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
           style={
             isNavOpen
               ? {
-                  height: '3rem',
+                  height: '30px',
                   left: '50%',
                   top: '50%',
                   borderRadius: '1rem',
@@ -140,7 +140,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
                 }
               : isNavHovered
               ? {
-                  height: '3rem',
+                  height: '30px',
                   left: '50%',
                   top: '50%',
                   borderRadius: '1rem',
