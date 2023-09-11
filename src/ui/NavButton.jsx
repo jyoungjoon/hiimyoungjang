@@ -107,7 +107,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
                   width: '30px',
                   left: '50%',
                   top: '50%',
-                  borderRadius: '1rem',
+                  borderRadius: '10px',
                   transform:
                     'translateX(-50%) translateY(-50%) rotate(135deg) scale(1.2)',
                 }
@@ -116,7 +116,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
                   width: '30px',
                   left: '50%',
                   top: '50%',
-                  borderRadius: '1rem',
+                  borderRadius: '10px',
                   transform: 'translateX(-50%) translateY(-50%)',
                 }
               : {
@@ -134,7 +134,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
                   height: '30px',
                   left: '50%',
                   top: '50%',
-                  borderRadius: '1rem',
+                  borderRadius: '10px',
                   transform:
                     'translateX(-50%) translateY(-50%) rotate(135deg) scale(1.2)',
                 }
@@ -143,7 +143,7 @@ function NavButton({ isNavOpen, setIsNavOpen }) {
                   height: '30px',
                   left: '50%',
                   top: '50%',
-                  borderRadius: '1rem',
+                  borderRadius: '10px',
                   transform: 'translateX(-50%) translateY(-50%)',
                 }
               : {
