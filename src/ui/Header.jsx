@@ -14,7 +14,7 @@ const StyledHeader = styled.div`
   padding: 0rem 5rem;
   margin-bottom: 5rem;
   z-index: 999999;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: multiply;
 
   @media ${device.laptop} {
     padding: 0rem 2.5rem;
