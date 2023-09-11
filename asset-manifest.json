@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/hiimyoungjang/static/js/main.d8b712ba.js",
+    "main.js": "/hiimyoungjang/static/js/main.18d9f547.js",
     "index.html": "/hiimyoungjang/index.html",
-    "main.d8b712ba.js.map": "/hiimyoungjang/static/js/main.d8b712ba.js.map"
+    "main.18d9f547.js.map": "/hiimyoungjang/static/js/main.18d9f547.js.map"
   },
   "entrypoints": [
-    "static/js/main.d8b712ba.js"
+    "static/js/main.18d9f547.js"
   ]
 }
