@@ -86,6 +86,11 @@ const AboutText = styled.p`
   letter-spacing: 0.2rem;
   color: #424242;
   overflow: scroll;
+
+  @media ${device.laptop} {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
 `;
 
 const AboutPicture = styled.div`
