@@ -41,6 +41,7 @@ const ProjectPicturesDiv = styled.div`
 
   @media ${device.laptop} {
     grid-template-columns: 1fr;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -58,6 +59,10 @@ const PictureTitle = styled.h2`
   font-size: 1.75rem;
   margin: 2rem auto;
   letter-spacing: 0.1rem;
+
+  @media ${device.laptop} {
+    font-size: 16px;
+  }
 `;
 
 const ProjectPicture = styled.div`
@@ -90,7 +95,7 @@ const PictureDescription = styled.div`
   font-weight: 500;
 
   @media ${device.laptop} {
-    font-size: 1.2rem;
+    font-size: 14px;
   }
 `;
 
@@ -120,6 +125,7 @@ const ProjectDetailsWrapper = styled.div`
   @media ${device.laptop} {
     display: flex;
     flex-direction: column;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -133,7 +139,7 @@ const ProjectSummary = styled.div`
     font-family: 'Ysabeau SC', sans-serif;
     color: #424242;
     @media ${device.laptop} {
-      font-size: 1.6rem;
+      font-size: 14px;
     }
   }
 
@@ -146,11 +152,14 @@ const ProjectSummary = styled.div`
     display: inline-block;
     width: 17.5rem;
     @media ${device.laptop} {
-      font-size: 1.6rem;
+      width: 10rem;
+      font-size: 16px;
+      padding: 1.75rem 0;
     }
   }
 
   @media ${device.laptop} {
+    padding: 2rem;
     width: 100%;
     font-size: 1.6rem;
   }
@@ -168,8 +177,10 @@ const ProjectDescription = styled.div`
   white-space: pre-line;
   text-align: left;
   @media ${device.laptop} {
+    border-top: 1px solid #cecece;
+    padding: 2rem;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 `;
 
