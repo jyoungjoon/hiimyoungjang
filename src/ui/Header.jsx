@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './MediaQueries';
 
 import Logo from './Logo';
 import NavButton from './NavButton';
@@ -13,6 +14,10 @@ const StyledHeader = styled.div`
   padding: 0rem 5rem;
   margin-bottom: 5rem;
   z-index: 999999;
+
+  @media ${device.laptop} {
+    padding: 0rem 5%;
+  }
 `;
 
 function Header({ isNavOpen, setIsNavOpen, setIsHome }) {

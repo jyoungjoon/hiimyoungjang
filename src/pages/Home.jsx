@@ -74,6 +74,7 @@ const StyledLink = styled(Link)`
   color: #035aa6;
   text-transform: lowercase;
   text-decoration: none;
+  margin: 0 auto;
   &:visited {
     color: #035aa6;
   }
