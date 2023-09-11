@@ -47,7 +47,7 @@ const StyledProjectPicture = styled.div`
     margin-top: 0;
     width: 95%;
     border-radius: 2rem 2rem 2rem 2rem;
-    height: 50rem;
+    height: 45rem;
   }
 `;
 
