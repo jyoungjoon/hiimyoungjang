@@ -16,7 +16,7 @@ const StyledHeader = styled.div`
   z-index: 999999;
 
   @media ${device.laptop} {
-    padding: 0rem 5%;
+    padding: 0rem 2.5rem;
   }
 `;
 

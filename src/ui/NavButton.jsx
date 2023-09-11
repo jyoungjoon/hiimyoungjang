@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import { device } from './MediaQueries';
 
 const StyledNavButton = styled.div`
   position: relative;
@@ -25,6 +26,10 @@ const Overlay = styled.div`
   background-color: transparent;
   right: 5rem;
   cursor: pointer;
+
+  @media ${device.laptop} {
+    right: 2.5rem;
+  }
 `;
 
 function NavButton({ isNavOpen, setIsNavOpen }) {
