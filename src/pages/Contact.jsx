@@ -58,6 +58,7 @@ const Info = styled.div`
   flex-direction: column;
   gap: 5rem;
   border-top: 1px solid #cecece;
+  margin-top: 2rem;
 `;
 
 const Donation = styled.div`
@@ -67,6 +68,7 @@ const Donation = styled.div`
   flex-direction: column;
   gap: 5rem;
   border-top: 1px solid #cecece;
+  margin-top: 2rem;
 `;
 
 const InfoType = styled.div`

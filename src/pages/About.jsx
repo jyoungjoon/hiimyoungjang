@@ -44,24 +44,31 @@ const AboutTextContent = styled.div`
   width: 80%;
   height: 90%;
   border-top: 1px solid #cecece;
+  margin-top: 2rem;
+`;
+
+const HeadingDiv = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 
   & a {
-    position: absolute;
-    top: -5%;
-    right: 0;
+    display: inline-block;
     text-decoration: none;
     font-size: 3rem;
     letter-spacing: 0.2rem;
     color: #424242;
+    margin-bottom: -1rem;
 
     @media ${device.laptop} {
-      top: -2.5rem;
     }
 
     & div {
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 2rem;
 
       & span {
         font-size: 2rem;
@@ -104,8 +111,8 @@ const AboutPicture = styled.div`
   }
 
   @media ${device.laptop} {
-    height: 100%;
-    background-position: bottom center;
+    background-position: center;
+    background-size: contain;
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -139,13 +146,15 @@ function About({ isNavOpen, setIsHome }) {
   return (
     <StyledAbout>
       <AboutTextDiv>
-        <Heading className="animateItem" name={'About'} />
-        <AboutTextContent>
+        <HeadingDiv>
+          <Heading className="animateItem" name={'About'} />
           <a href={'yjsresume.pdf'} target="_blank" rel="noreferrer">
             <div>
               resume <span className="material-symbols-rounded">download</span>
             </div>
           </a>
+        </HeadingDiv>
+        <AboutTextContent>
           <AboutText className="animateItem">
             Hey, there 🖐️ I'm Young Jang, a versatile full-stack developer with
             a keen eye for UI/UX design. My roots trace back to South Korea, but

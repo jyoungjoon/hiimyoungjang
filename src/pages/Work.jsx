@@ -40,7 +40,14 @@ const StyledProjectPicture = styled.div`
     margin-top: 0;
     width: 95%;
     border-radius: 2rem 2rem 2rem 2rem;
-    height: 50rem;
+    height: 70rem;
+  }
+
+  @media ${device.tabletM} {
+    margin-top: 0;
+    width: 95%;
+    border-radius: 2rem 2rem 2rem 2rem;
+    height: 60rem;
   }
 `;
 
@@ -62,6 +69,7 @@ const ProjectList = styled.ul`
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  margin-top: 2rem;
 `;
 
 function Work({
