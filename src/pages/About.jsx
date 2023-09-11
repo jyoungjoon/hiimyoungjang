@@ -19,10 +19,11 @@ const StyledAbout = styled.div`
     align-items: center;
     flex-direction: column-reverse;
     width: 95%;
-    height: 100%;
+    height: auto;
     margin-left: 0;
     margin: 0 auto;
     margin-top: 15%;
+    margin-bottom: 15%;
   }
 `;
 
@@ -44,19 +45,26 @@ const AboutTextContent = styled.div`
   height: 90%;
   border-top: 1px solid #cecece;
 
-  & div {
+  & a {
     position: absolute;
+    top: -5%;
     right: 0;
-    top: -4rem;
-    font-size: 2rem;
+    text-decoration: none;
+    font-size: 3rem;
     letter-spacing: 0.2rem;
-    color: #035aa6;
+    color: #424242;
 
-    & span {
-      transform: translateY(20%);
-      @media ${device.laptop} {
-        font-size: 3rem;
-        transform: translateY(20%);
+    @media ${device.laptop} {
+      top: -2.5rem;
+    }
+
+    & div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & span {
+        font-size: 2rem;
       }
     }
   }
@@ -104,6 +112,7 @@ const AboutPicture = styled.div`
     min-width: 100%;
     border-radius: 2rem 2rem 2rem 2rem;
     transform: translate(0%, 0%);
+    height: 60rem;
   }
 `;
 

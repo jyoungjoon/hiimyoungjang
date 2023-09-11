@@ -15,11 +15,13 @@ const StyledContact = styled.div`
   margin: 0 auto;
 
   @media ${device.laptop} {
-    margin-top: 15%;
+    margin-top: 7.5%;
     width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    overflow: scroll;
+    margin-bottom: 7.5%;
   }
 `;
 
@@ -32,6 +34,7 @@ const InfoDiv = styled.div`
   @media ${device.laptop} {
     width: 100%;
     height: 30%;
+    min-height: 35rem;
     margin-right: -7.5%;
   }
 `;

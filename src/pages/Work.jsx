@@ -16,9 +16,11 @@ const StyledWork = styled.div`
 
   @media ${device.laptop} {
     margin-top: 15%;
+    margin-bottom: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: auto;
   }
 `;
 
@@ -36,9 +38,9 @@ const StyledProjectPicture = styled.div`
 
   @media ${device.laptop} {
     margin-top: 0;
-    height: 65%;
     width: 95%;
     border-radius: 2rem 2rem 2rem 2rem;
+    height: 50rem;
   }
 `;
 
@@ -50,7 +52,7 @@ const WorkList = styled.div`
 
   @media ${device.laptop} {
     margin-right: -19%;
-    height: 40%;
+    height: 50%;
     width: 100%;
   }
 `;

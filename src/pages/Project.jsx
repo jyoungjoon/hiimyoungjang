@@ -24,6 +24,7 @@ const ProjectDiv = styled.div`
   overflow: scroll;
   width: 100%;
   max-height: 100%;
+
   @media ${device.laptop} {
     width: 95%;
   }
@@ -78,6 +79,7 @@ const ProjectPicture = styled.div`
 
   @media ${device.laptop} {
     width: 100% !important;
+    height: 50rem !important;
   }
 `;
 

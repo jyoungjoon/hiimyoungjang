@@ -17,6 +17,7 @@ const StyledHome = styled.div`
   @media ${device.laptop} {
     width: 95%;
     margin: 0 auto;
+    min-height: 65rem;
   }
 `;
 
