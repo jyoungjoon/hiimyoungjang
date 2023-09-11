@@ -79,6 +79,15 @@ const InfoType = styled.div`
   &:first-child {
     margin-top: 2.5rem;
   }
+
+  & span {
+    @media ${device.laptopL} {
+      font-size: 18px;
+    }
+    @media ${device.laptop} {
+      font-size: 14px;
+    }
+  }
 `;
 
 const DonationType = styled.div`
@@ -89,9 +98,25 @@ const DonationType = styled.div`
   &:first-child {
     margin-top: 2.5rem;
   }
+
+  & span {
+    @media ${device.laptopL} {
+      font-size: 18px;
+    }
+    @media ${device.laptop} {
+      font-size: 14px;
+    }
+  }
 `;
 
-const StyledLink = styled(Link)``;
+const StyledLink = styled(Link)`
+  @media ${device.laptopL} {
+    font-size: 18px;
+  }
+  @media ${device.laptop} {
+    font-size: 14px;
+  }
+`;
 
 function Contact({ isNavOpen, setIsHome }) {
   setIsHome(false);
